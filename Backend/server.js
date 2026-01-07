@@ -20,6 +20,10 @@ const connectDB = async() => {
   }
 }
 
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use("/api",chatRouts);
 
 app.get('/',(req,res)=>{

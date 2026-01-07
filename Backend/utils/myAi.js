@@ -11,3 +11,4 @@ const getAiResponse = async (message) => {
   return response.text ;
 }
 
+export default getAiResponse ;
