@@ -38,7 +38,7 @@ router.get("/thread/:threadId", async (req, res) => {
   const { threadId } = req.params;
 
   try {
-    const thread = await Thread.findById(threadId);
+    let thread = await Thread.findById(threadId);
     if (!thread) {
       return res.status(404).json({ error: "Thread not found" });
     }
@@ -79,21 +79,8 @@ router.post("/chat", async (req, res) => {
         title: message,
         messages: []
       });
-      //create new thread
-      // const newThread = new Thread({
-      //   threadId: threadId,
-      //   title: message,
-      //   messages: [{ role: "user", content: message }]
-      // });
-      // newThread.messages.push([{ role: "user", content: message }]);
-
-      // const aiResponse = await myAiResponse(message);
-
-      // newThread.messages.push([{ role: "assistant", content: aiResponse }]);
-      // newThread.updatedAt = new Date();
-      // await newThread.save();
-      // res.json({ reply: aiResponse });
     }
+    
     thread.messages.push({ role: "user", content: message });
 
     const aiResponse = await myAiResponse(message);

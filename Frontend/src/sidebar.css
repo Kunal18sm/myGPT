@@ -1,0 +1,60 @@
+* {
+  font-family: 'Open Sena', 'sens-serif';
+  ;
+}
+
+.logo {
+  width: 3rem;
+}
+
+.sidebar {
+  background-color: #171717;
+  color: #b4b4b4;
+  height: 100vh;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding: 0 10px;
+  border-radius: 1rem;
+  background-color: transparent;
+}
+
+.history {
+  margin: 10px;
+  padding: 10px;
+  height: 100%;
+}
+
+.history li {
+  list-style-type: none;
+  cursor: pointer;
+  padding: 2px 5px;
+  margin-bottom: 0.4rem;
+  font-size: 14px;
+  border: solid 5px transparent;
+  border-radius: 0.6rem;
+}
+
+.sign{
+  padding: 10px;
+  margin: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+button:hover {
+  background-color: rgb(255, 255, 255, 0.05);
+}
+
+.history li:hover {
+  background-color: rgb(255, 255, 255, 0.05);
+
+}

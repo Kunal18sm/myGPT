@@ -20,6 +20,9 @@ const connectDB = async() => {
   }
 }
 
+app.use(cors({
+  origin: "http://localhost:5173" // Vite default
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
